@@ -1,0 +1,20 @@
+{
+	"menu": {
+		"background": "制作の背景",
+		"overview": "作品概要",
+		"flow": "操作の流れ",
+		"future": "今後の展望",
+		"team": "チーム紹介",
+		"contact": "お問い合わせ"
+	},
+	"background": "このプロジェクトは...（ここに制作の背景を記載）",
+	"overview": "作品の概要をここに記載します。",
+	"flow": "操作の流れをここに記載します。",
+	"future": "今後の展望をここに記載します。",
+	"footer": {
+		"team": "私たちは...（チーム紹介文）",
+		"contact": "ご連絡は example@example.com まで"
+	},
+	"lang": "日本語",
+	"switch": "English"
+}
