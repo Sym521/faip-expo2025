@@ -22,8 +22,7 @@ export default function Menu() {
 				aria-label="menu"
 				className="w-12 h-12 rounded-full bg-gradient-to-br from-pink-300 to-[#53beed]/70 text-base flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-120 border-2 border-stone-100/80"
 				onClick={() => setOpen((v) => !v)}
-			>
-			</button>
+			></button>
 			<div
 				className={`absolute right-0 mt-2 w-48 bg-stone-50 rounded-xl shadow-xl overflow-hidden transition-all duration-500 ease-in-out ${open ? "max-h-96 opacity-100" : "max-h-0 opacity-0 pointer-events-none"}`}
 				style={{ backdropFilter: "blur(8px)" }}
