@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} **/
 module.exports = {
     content: [
         "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,10 +8,10 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                base: '#fafbf6',
-                navy: '#132d59',
-                pink: '#b74e70',
-                sky: '#53beed',
+                snow: '#fafbf6',
+                darkblue: '#132d59',
+                myakupink: '#b74e70',
+                myakusky: '#53beed',
             },
         },
     },
