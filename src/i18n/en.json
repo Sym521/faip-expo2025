@@ -1,13 +1,11 @@
 {
 	"menu": {
-		"background": "Background",
 		"overview": "Overview",
 		"flow": "How it works",
 		"future": "Future Prospects",
 		"team": "Team",
 		"contact": "Contact"
 	},
-	"background": "This project was created because... (describe background here)",
 	"overview": "Project overview goes here.",
 	"flow": "How to use the project goes here.",
 	"future": "Future prospects go here.",

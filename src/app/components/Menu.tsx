@@ -1,30 +1,26 @@
 "use client";
 import { useState } from "react";
-import { Lang, getMessages } from "./i18n";
-
-interface MenuProps {
-	lang: Lang;
-	onLangChange: (lang: Lang) => void;
-}
+import { getMessages } from "../i18n";
+import { useLang } from "../LangContext";
 
 const menuItems = [
-	{ id: "background", icon: "\uD83D\uDCC3" },
-	{ id: "overview", icon: "\uD83D\uDCC4" },
-	{ id: "flow", icon: "\uD83D\uDE97" },
-	{ id: "future", icon: "\uD83D\uDD52" },
-	{ id: "team", icon: "\uD83D\uDC65" },
-	{ id: "contact", icon: "\u2709\uFE0F" },
+	{ id: "overview", icon: "📄" },
+	{ id: "flow", icon: "⚡" },
+	{ id: "future", icon: "🕒" },
+	{ id: "team", icon: "👥" },
+	{ id: "contact", icon: "✉️" },
 ];
 
-export default function Menu({ lang, onLangChange }: MenuProps) {
+export default function Menu() {
 	const [open, setOpen] = useState(false);
+	const { lang, setLang } = useLang();
 	const t = getMessages(lang);
 
 	return (
 		<div className="fixed top-4 right-4 z-50">
 			<button
 				aria-label="menu"
-				className="w-12 h-12 rounded-full bg-navy text-base flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110"
+				className="w-12 h-12 rounded-full bg-gradient-to-br from-pink via-sky to-navy text-base flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110 border-2 border-white/80"
 				onClick={() => setOpen((v) => !v)}
 			>
 				<span
@@ -57,9 +53,11 @@ export default function Menu({ lang, onLangChange }: MenuProps) {
 				</ul>
 				<button
 					className="w-full py-2 bg-pink text-base font-bold hover:bg-navy hover:text-base transition-colors duration-200 flex items-center justify-center gap-2"
-					onClick={() => onLangChange(lang === "ja" ? "en" : "ja")}
+					onClick={() => setLang(lang === "ja" ? "en" : "ja")}
 				>
-					<span role="img" aria-label="language" className="text-lg">🌐</span>
+					<span role="img" aria-label="language" className="text-lg">
+						🌐
+					</span>
 					{t.switch}
 				</button>
 			</div>
