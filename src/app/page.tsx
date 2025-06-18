@@ -1,7 +1,6 @@
 "use client";
 import { getMessages } from "./i18n";
 import { useLang } from "./LangContext";
-import { AuroraText } from "./components/aurora-text";
 
 export default function Home() {
 	const { lang } = useLang();
@@ -9,14 +8,18 @@ export default function Home() {
 
 	return (
 		<main className="max-w-md mx-auto px-2 pb-8">
-			<section className="pt-2 text-left">
-				<AuroraText
-					className="text-6xl font-extrabold"
-					colors={["b74e70", "#ff9190", "#5e72eb", "#53beed"]}
-					speed={2}
-				>
-					Redesign Your Sleep With AI
-				</AuroraText>
+			<section className="mt-2 text-left">
+				<div className="font-inter text-[5rem] font-extrabold leading-16 tracking-tighter text-[#3280e6] mb-4">
+					<p className="text-[#53beed]">
+						Redesign
+					</p>
+					<p>
+						Your Sleep
+					</p>
+					<p>
+						With <span className="text-[#dd3869]">AI</span>
+					</p>
+				</div>
 			</section>
 			<section id="overview" className="py-10 scroll-mt-20">
 				<h2 className="text-xl font-bold text-[#b74e70] mb-2">

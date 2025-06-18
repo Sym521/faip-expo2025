@@ -1,9 +1,15 @@
 "use client";
 
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Menu from "./components/Menu";
 import { LangProvider } from "./LangContext";
+
+const inter = Inter({
+	variable: "--font-inter",
+	subsets: ["latin"],
+	weight: ["400", "500", "600", "700", "800"],
+});
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -23,11 +29,11 @@ export default function RootLayout({
 	return (
 		<html lang="ja">
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-br from-base via-sky to-pink`}
+				className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} min-h-screen bg-[#132d59]/2`}
 			>
 				<LangProvider>
 					<Menu />
-					<div className="pt-20">{children}</div>
+					<div className="pt-4">{children}</div>
 				</LangProvider>
 			</body>
 		</html>
