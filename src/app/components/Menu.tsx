@@ -6,6 +6,7 @@ import { useLang } from "../LangContext";
 const menuItems = [
 	{ id: "overview", icon: "📄" },
 	{ id: "flow", icon: "⚡" },
+	{ id: "achievements", icon: "🏆" },
 	{ id: "future", icon: "🕒" },
 	{ id: "team", icon: "👥" },
 	{ id: "contact", icon: "✉️" },

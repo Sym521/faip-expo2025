@@ -43,7 +43,9 @@ export default function Home() {
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>
 				<h2 className="text-xl font-bold text-[#b74e70] mb-2">{t.menu.flow}</h2>
-				<p className="text-blue-950/90 leading-relaxed">{t.flow}</p>
+				{t.flow_contents.map((line: string, idx: number) => (
+					<p key={idx} className="text-blue-950/90 leading-relaxed">{line}</p>
+				))}
 			</section>
 			<section
 				id="future"
