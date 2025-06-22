@@ -21,7 +21,7 @@ export default function Home() {
 						With <span className="text-[#dd3869]">AI</span>
 					</p>
 					<Image
-						src="/faip-illust.png"
+						src="/faipIllust.png"
 						alt="Description of image"
 						width={180}
 						height={200}
@@ -43,9 +43,27 @@ export default function Home() {
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>
 				<h2 className="text-xl font-bold text-[#b74e70] mb-2">{t.menu.flow}</h2>
-				{t.flow_contents.map((line: string, idx: number) => (
-					<p key={idx} className="text-blue-950/90 leading-relaxed">{line}</p>
-				))}
+				{t.flow_contents.map((line: string, idx: number) => {
+					// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
+					const imgMatch = line.match(/^\[img:(.+)\]$/);
+					if (imgMatch) {
+						return (
+							<div key={idx} className="my-4 flex justify-center">
+								<Image
+									src={imgMatch[1]}
+									alt=""
+									width={500}
+									height={300}
+									quality={100}
+									className="rounded-lg shadow-md object-cover max-w-full"
+								/>
+							</div>
+						);
+					}
+					return (
+						<p key={idx} className="text-blue-950/90 leading-relaxed">{line}</p>
+					);
+				})}
 			</section>
 			<section
 				id="future"

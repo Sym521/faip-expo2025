@@ -2,9 +2,10 @@
 	"menu": {
 		"overview": "Overview",
 		"flow": "How it works",
+		"achievements": "Achievements",
 		"future": "Future Prospects",
-		"team": "Team",
-		"contact": "Contact"
+		"team": "About Us",
+		"contact": "Contact📮"
 	},
 	"overview": "Project overview goes here.",
 	"flow": "How to use the project goes here.",
