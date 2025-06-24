@@ -18,8 +18,15 @@
 		"4. 指定されたエアーバッグに対して、エアーポンプで空気圧を調整します。",
 		"[img:/flowContent4.png]"
 	],
-	"future": "今後の展望をここに記載します。",
-	"achievements": "実績をここに記載します。",
+	"future_contents": [
+		"現在、日本は他の先進国と比べて睡眠不足が深刻です。OECD（経済協力開発機構）の2021年の調査によると、日本人の平均睡眠時間は7時間22分で、OECD加盟国中で最も短いとされています。",
+		"[img:/compareSleepingHours.png]"
+	],
+	"achievement_contents": [
+		"1. AI技術を活用した枕の開発",
+		"2. ユーザーの頭の位置を高精度で推定",
+		"3. 自動調整機能による快適な睡眠環境の提供"
+	],
 	"footer": {
 		"team": "私たちは...（チーム紹介文）",
 		"contact": "メール：example@example.com"
