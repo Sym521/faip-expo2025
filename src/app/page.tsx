@@ -11,12 +11,8 @@ export default function Home() {
 		<main className="max-w-md mx-auto px-2 pb-8">
 			<section className="pb-8 text-left relative">
 				<div className="font-inter text-[5rem] font-extrabold leading-16 tracking-tighter text-[#3280e6] mb-4">
-					<p className="text-[#53beed]">
-						Redesign
-					</p>
-					<p>
-						Your Sleep
-					</p>
+					<p className="text-[#53beed]">Redesign</p>
+					<p>Your Sleep</p>
 					<p>
 						With <span className="text-[#dd3869]">AI</span>
 					</p>
@@ -50,7 +46,9 @@ export default function Home() {
 				id="flow"
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>
-				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">{t.menu.flow}</h2>
+				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">
+					{t.menu.flow}
+				</h2>
 				{t.flow_contents.map((line: string, idx: number) => {
 					// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
 					const imgMatch = line.match(/^\[img:(.+)\]$/);
@@ -69,7 +67,9 @@ export default function Home() {
 						);
 					}
 					return (
-						<p key={idx} className="px-1 text-blue-950/90 leading-relaxed">{line}</p>
+						<p key={idx} className="px-1 text-blue-950/90 leading-relaxed">
+							{line}
+						</p>
 					);
 				})}
 			</section>
@@ -77,7 +77,9 @@ export default function Home() {
 				id="future"
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>
-				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">{t.menu.future}</h2>
+				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">
+					{t.menu.future}
+				</h2>
 				{t.future_contents.map((line: string, idx: number) => {
 					// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
 					const imgMatch = line.match(/^\[img:(.+)\]$/);
@@ -96,7 +98,9 @@ export default function Home() {
 						);
 					}
 					return (
-						<p key={idx} className="text-blue-950/90 leading-relaxed">{line}</p>
+						<p key={idx} className="text-blue-950/90 leading-relaxed">
+							{line}
+						</p>
 					);
 				})}
 			</section>
@@ -104,7 +108,9 @@ export default function Home() {
 				id="achievements"
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>
-				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">{t.menu.achievements}</h2>
+				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">
+					{t.menu.achievements}
+				</h2>
 				{t.achievement_contents.map((line: string, idx: number) => {
 					// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
 					const imgMatch = line.match(/^\[img:(.+)\]$/);
@@ -123,16 +129,15 @@ export default function Home() {
 						);
 					}
 					return (
-						<p key={idx} className="text-blue-950/90 leading-relaxed">{line}</p>
+						<p key={idx} className="text-blue-950/90 leading-relaxed">
+							{line}
+						</p>
 					);
 				})}
-
 			</section>
 
 			{/* footer */}
-			<footer
-				className="mt-10 border-t border-blue-950/20 pt-4"
-			>
+			<footer className="mt-10 border-t border-blue-950/20 pt-4">
 				<section id="team" className="mb-4">
 					<h3 className="text-lg font-semibold text-[#53beed] mb-1">
 						{t.menu.team}
@@ -149,7 +154,6 @@ export default function Home() {
 					&copy; {new Date().getFullYear()} NeurestX
 				</div>
 			</footer>
-
 		</main>
 	);
 }
