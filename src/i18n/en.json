@@ -8,7 +8,10 @@
 		"contact": "Contact📮"
 	},
 	"overview": "Project overview goes here.",
-	"flow": "How to use the project goes here.",
+	"flow_contents": [
+		"How to use the project goes here.",
+		"[img:/flowContent1.png]"
+	],
 	"future": "Future prospects go here.",
 	"footer": {
 		"team": "We are... (team introduction)",
