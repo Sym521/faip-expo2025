@@ -38,13 +38,13 @@ export default function Home() {
 				</h2>
 				<p className="px-1 text-blue-950/90 leading-relaxed">{t.overview}</p>
 				<Image
-									src="/overview.png"
-									alt="Overview image"
-									width={500}
-									height={300}
-									quality={100}
-									className="mt-2 rounded-lg object-cover max-w-full"
-								/>
+					src="/overview.png"
+					alt="Overview image"
+					width={500}
+					height={300}
+					quality={100}
+					className="mt-2 rounded-lg object-cover max-w-full"
+				/>
 			</section>
 			<section
 				id="flow"
@@ -80,6 +80,15 @@ export default function Home() {
 				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">{t.menu.future}</h2>
 				<p className="text-blue-950/90 leading-relaxed">{t.future}</p>
 			</section>
+			<section
+				id="achievements"
+				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
+			>
+				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">{t.menu.achievements}</h2>
+				<p className="text-blue-950/90 leading-relaxed">{t.achievements}</p>
+
+			</section>
+
 			{/* footer */}
 			<footer
 				className="mt-10 border-t border-blue-950/20 pt-4"
@@ -100,7 +109,7 @@ export default function Home() {
 					&copy; {new Date().getFullYear()} NeurestX
 				</div>
 			</footer>
-		
+
 		</main>
 	);
 }
