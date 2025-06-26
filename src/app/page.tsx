@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { getMessages } from "./i18n";
 import { useLang } from "./LangContext";
+import Link from "next/link";
+import { requestFormReset } from "react-dom";
 
 export default function Home() {
 	const { lang } = useLang();
@@ -111,44 +113,99 @@ export default function Home() {
 				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">
 					{t.menu.achievements}
 				</h2>
-				{t.achievement_contents.map((line: string, idx: number) => {
-					// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
-					const imgMatch = line.match(/^\[img:(.+)\]$/);
-					if (imgMatch) {
+				<div className="my-2">
+					<Link href="https://dcon.ai/dcon2024/" className="text-lg font-bold text-[#2784ac] hover:underline">{t.achievement_title_dcon}</Link>
+					{t.achievement_text_dcon.map((line: string, idx: number) => {
+						// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
+						const imgMatch = line.match(/^\[img:(.+)\]$/);
+						if (imgMatch) {
+							return (
+								<div key={idx} className="my-2 flex justify-center">
+									<Image
+										src={imgMatch[1]}
+										alt="Description of dcon achievement"
+										width={500}
+										height={300}
+										quality={100}
+										className="mt-2 rounded-lg object-cover max-w-full"
+									/>
+								</div>
+							);
+						}
 						return (
-							<div key={idx} className="my-2 flex justify-center">
-								<Image
-									src={imgMatch[1]}
-									alt="Description of achievement"
-									width={500}
-									height={300}
-									quality={100}
-									className="mt-2 rounded-lg object-cover max-w-full"
-								/>
-							</div>
+							<p key={idx} className="text-base text-blue-950/90 leading-relaxed">
+								{line}
+							</p>
 						);
-					}
-					return (
-						<p key={idx} className="text-blue-950/90 leading-relaxed">
-							{line}
-						</p>
-					);
-				})}
+					})}
+				</div>
+				<div className="my-2">
+					<Link href="https://www.oita-ct.ac.jp/2024/12/26/20241225_45thjesko/" className="text-lg font-bold text-[#2784ac] hover:underline">{t.achievement_title_jes}</Link>
+					{t.achievement_text_jes.map((line: string, idx: number) => {
+						const imgMatch = line.match(/^\[img:(.+)\]$/);
+						if (imgMatch) {
+							return (
+								<div key={idx} className="my-2 flex justify-center">
+
+									<Image
+										src={imgMatch
+										[1]}
+										alt="Description of jes"
+										width={500}
+										height={300}
+										quality={100}
+										className="mt-2 rounded-lg object-cover max-w-full"
+									/>
+								</div>
+							);
+						}
+						return (
+							<p key={idx} className="text-base text-blue-950/90 leading-relaxed">
+								{line}
+							</p>
+						);
+					})}
+				</div>
+
 			</section>
 
 			{/* footer */}
 			<footer className="mt-10 border-t border-blue-950/20 pt-4">
 				<section id="team" className="mb-4">
-					<h3 className="text-lg font-semibold text-[#53beed] mb-1">
+					<h3 className="text-lg font-semibold text-[#53beed]">
 						{t.menu.team}
 					</h3>
-					<p className="text-blue-950/90">{t.footer.team}</p>
+					<p className="mt-1 text-lg font-bold">NeurestX</p>
+					{t.footer.team_contents.map((line: string, idx: number) => {
+						const imgMatch = line.match(/^\[img:(.+)\]$/);
+						if (imgMatch) {
+							return (
+								<div key={idx} className="my-2 flex justify-center">
+
+									<Image
+										src={imgMatch
+										[1]}
+										alt="About us"
+										width={500}
+										height={300}
+										quality={100}
+										className="mt-2 rounded-lg object-cover max-w-full"
+									/>
+								</div>
+							);
+						}
+						return (
+							<p key={idx} className="text-base text-blue-950/90 leading-relaxed">
+								{line}
+							</p>
+						);
+					})}
 				</section>
 				<section id="contact">
 					<h3 className="text-lg font-semibold text-[#53beed] mb-1">
 						{t.menu.contact}
 					</h3>
-					<p className="text-blue-950/90">{t.footer.contact}</p>
+					<Link href="mailto:sugarkouga0926@gmail.com" className="text-blue-950/90">{t.footer.contact}</Link>
 				</section>
 				<div className="mt-4 text-xs text-blue-950/60 text-center">
 					&copy; {new Date().getFullYear()} NeurestX
