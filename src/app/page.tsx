@@ -3,14 +3,13 @@ import Image from "next/image";
 import { getMessages } from "./i18n";
 import { useLang } from "./LangContext";
 import Link from "next/link";
-import { requestFormReset } from "react-dom";
 
 export default function Home() {
 	const { lang } = useLang();
 	const t = getMessages(lang);
 
 	return (
-		<main className="max-w-md mx-auto px-2 pb-8">
+		<main className="max-w-md mx-auto px-4 pb-8">
 			<section className="pb-8 text-left relative">
 				<div className="font-inter text-[5rem] font-extrabold leading-16 tracking-tighter text-[#3280e6] mb-4">
 					<p className="text-[#53beed]">Redesign</p>
@@ -83,7 +82,7 @@ export default function Home() {
 					{t.menu.future}
 				</h2>
 				{t.future_contents.map((line: string, idx: number) => {
-					// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
+					const boldMatch = line.match(/^\*\*(.+)\*\*$/);
 					const imgMatch = line.match(/^\[img:(.+)\]$/);
 					if (imgMatch) {
 						return (
@@ -99,8 +98,18 @@ export default function Home() {
 							</div>
 						);
 					}
+					if (boldMatch) {
+						return (
+							<p
+								key={idx}
+								className="px-2 text-blue-950/90 leading-relaxed font-semibold"
+							>
+								{boldMatch[1]}
+							</p>
+						);
+					}
 					return (
-						<p key={idx} className="text-blue-950/90 leading-relaxed">
+						<p key={idx} className="px-2 text-blue-950/90 leading-relaxed">
 							{line}
 						</p>
 					);
@@ -114,9 +123,13 @@ export default function Home() {
 					{t.menu.achievements}
 				</h2>
 				<div className="my-2">
-					<Link href="https://dcon.ai/dcon2024/" className="text-lg font-bold text-[#2784ac] hover:underline">{t.achievement_title_dcon}</Link>
+					<Link
+						href="https://dcon.ai/dcon2024/"
+						className="text-lg font-bold text-[#2784ac] hover:underline"
+					>
+						{t.achievement_title_dcon}
+					</Link>
 					{t.achievement_text_dcon.map((line: string, idx: number) => {
-						// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
 						const imgMatch = line.match(/^\[img:(.+)\]$/);
 						if (imgMatch) {
 							return (
@@ -133,23 +146,29 @@ export default function Home() {
 							);
 						}
 						return (
-							<p key={idx} className="text-base text-blue-950/90 leading-relaxed">
+							<p
+								key={idx}
+								className="px-2 text-base text-blue-950/90 leading-relaxed"
+							>
 								{line}
 							</p>
 						);
 					})}
 				</div>
 				<div className="my-2">
-					<Link href="https://www.oita-ct.ac.jp/2024/12/26/20241225_45thjesko/" className="text-lg font-bold text-[#2784ac] hover:underline">{t.achievement_title_jes}</Link>
+					<Link
+						href="https://www.oita-ct.ac.jp/2024/12/26/20241225_45thjesko/"
+						className="text-lg font-bold text-[#2784ac] hover:underline"
+					>
+						{t.achievement_title_jes}
+					</Link>
 					{t.achievement_text_jes.map((line: string, idx: number) => {
 						const imgMatch = line.match(/^\[img:(.+)\]$/);
 						if (imgMatch) {
 							return (
 								<div key={idx} className="my-2 flex justify-center">
-
 									<Image
-										src={imgMatch
-										[1]}
+										src={imgMatch[1]}
 										alt="Description of jes"
 										width={500}
 										height={300}
@@ -160,13 +179,15 @@ export default function Home() {
 							);
 						}
 						return (
-							<p key={idx} className="text-base text-blue-950/90 leading-relaxed">
+							<p
+								key={idx}
+								className="px-2 text-base text-blue-950/90 leading-relaxed"
+							>
 								{line}
 							</p>
 						);
 					})}
 				</div>
-
 			</section>
 
 			{/* footer */}
@@ -177,14 +198,13 @@ export default function Home() {
 					</h3>
 					<p className="mt-1 text-lg font-bold">NeurestX</p>
 					{t.footer.team_contents.map((line: string, idx: number) => {
+						const boldMatch = line.match(/^\*\*(.+)\*\*$/);
 						const imgMatch = line.match(/^\[img:(.+)\]$/);
 						if (imgMatch) {
 							return (
 								<div key={idx} className="my-2 flex justify-center">
-
 									<Image
-										src={imgMatch
-										[1]}
+										src={imgMatch[1]}
 										alt="About us"
 										width={500}
 										height={300}
@@ -194,8 +214,23 @@ export default function Home() {
 								</div>
 							);
 						}
+
+						if (boldMatch) {
+							return (
+								<p
+									key={idx}
+									className="px-1 text-[#b74e70] leading-relaxed font-semibold"
+								>
+									{boldMatch[1]}
+								</p>
+							);
+						}
+
 						return (
-							<p key={idx} className="text-base text-blue-950/90 leading-relaxed">
+							<p
+								key={idx}
+								className="px-1 text-base text-blue-950/90 leading-relaxed"
+							>
 								{line}
 							</p>
 						);
@@ -205,7 +240,12 @@ export default function Home() {
 					<h3 className="text-lg font-semibold text-[#53beed] mb-1">
 						{t.menu.contact}
 					</h3>
-					<Link href="mailto:sugarkouga0926@gmail.com" className="text-blue-950/90">{t.footer.contact}</Link>
+					<Link
+						href="mailto:sugarkouga0926@gmail.com"
+						className="text-blue-950/90"
+					>
+						{t.footer.contact}
+					</Link>
 				</section>
 				<div className="mt-4 text-xs text-blue-950/60 text-center">
 					&copy; {new Date().getFullYear()} NeurestX
