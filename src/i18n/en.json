@@ -12,10 +12,23 @@
 		"How to use the project goes here.",
 		"[img:/flowContent1.png]"
 	],
-	"future": "Future prospects go here.",
+	"future_contents": ["[img:/compareSleepingHours.png]"],
+	"achievement_title_dcon": "National College of Technology Deep Learning Contest 2024 (DCON2024) 3rd Place",
+	"achievement_text_dcon": [
+		"In May 2024, our project took 3rd place at the DCON2024 finals.",
+		"DCON is a competition where participants propose business plans using deep learning technology and compete on company valuation.",
+		"Following technical reviews and final presentations judged by active investors, our work was valued at 350 million yen."
+	],
+	"achievement_title_jes": "45th Kyushu Okinawa Chapter of the Japanese Society of Human Engineering Award",
+	"achievement_text_jes": [
+		"We presented at the 45th Kyushu Okinawa Chapter of the Japanese Society of Human Engineering and received an Excellence Presentation Award."
+	],
 	"footer": {
-		"team": "We are... (team introduction)",
-		"contact": "Contact: example@example.com"
+		"team_contents": [
+			"We are a student team from Oita National College of Technology, developing the AI pillow “FAIP.”",
+			"**Our goal is to utilize AI technology to transform sleep in Japan.**"
+		],
+		"contact": "✉️: sugarkouga0926@gmail.com"
 	},
 	"lang": "English",
 	"switch": "日本語"
