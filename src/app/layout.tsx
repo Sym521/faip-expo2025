@@ -29,7 +29,7 @@ export default function RootLayout({
 	return (
 		<html lang="ja">
 			<body
-				className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} min-h-screen bg-[#132d59]/2`}
+				className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} min-h-screen bg-darkblue/2`}
 			>
 				<LangProvider>
 					<Menu />

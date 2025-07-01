@@ -6,14 +6,7 @@ module.exports = {
         "./src/components/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {
-            colors: {
-                snow: '#fafbf6',
-                darkblue: '#132d59',
-                myakupink: '#b74e70',
-                myakusky: '#53beed',
-            },
-        },
+        extend: {},
     },
     plugins: [],
 };

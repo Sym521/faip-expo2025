@@ -12,7 +12,7 @@ export default function Home() {
 		<main className="max-w-md mx-auto px-4 pb-8">
 			<section className="pb-8 text-left relative">
 				<div className="font-inter text-[5rem] font-extrabold leading-16 tracking-tighter text-[#3280e6] mb-4">
-					<p className="text-[#53beed]">Redesign</p>
+					<p className="text-myakusky">Redesign</p>
 					<p>Your Sleep</p>
 					<p>
 						With <span className="text-[#dd3869]">AI</span>
@@ -30,10 +30,10 @@ export default function Home() {
 				id="overview"
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>
-				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">
+				<h2 className="text-2xl font-bold text-myakupink mb-2">
 					{t.menu.overview}
 				</h2>
-				<p className="px-1 text-blue-950/90 leading-relaxed">{t.overview}</p>
+				<p className="px-1 text-darkblue leading-relaxed">{t.overview}</p>
 				<Image
 					src="/overview.png"
 					alt="Overview image"
@@ -47,7 +47,7 @@ export default function Home() {
 				id="flow"
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>
-				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">
+				<h2 className="text-2xl font-bold text-myakupink mb-2">
 					{t.menu.flow}
 				</h2>
 				{t.flow_contents.map((line: string, idx: number) => {
@@ -68,7 +68,7 @@ export default function Home() {
 						);
 					}
 					return (
-						<p key={idx} className="px-1 text-blue-950/90 leading-relaxed">
+						<p key={idx} className="px-1 text-darkblue leading-relaxed">
 							{line}
 						</p>
 					);
@@ -78,7 +78,7 @@ export default function Home() {
 				id="future"
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>
-				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">
+				<h2 className="text-2xl font-bold text-myakupink mb-2">
 					{t.menu.future}
 				</h2>
 				{t.future_contents.map((line: string, idx: number) => {
@@ -102,14 +102,14 @@ export default function Home() {
 						return (
 							<p
 								key={idx}
-								className="px-2 text-blue-950/90 leading-relaxed font-semibold"
+								className="px-2 text-darkblue leading-relaxed font-semibold"
 							>
 								{boldMatch[1]}
 							</p>
 						);
 					}
 					return (
-						<p key={idx} className="px-2 text-blue-950/90 leading-relaxed">
+						<p key={idx} className="px-2 text-darkblue leading-relaxed">
 							{line}
 						</p>
 					);
@@ -119,7 +119,7 @@ export default function Home() {
 				id="achievements"
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>
-				<h2 className="text-2xl font-bold text-[#b74e70] mb-2">
+				<h2 className="text-2xl font-bold text-myakupink mb-2">
 					{t.menu.achievements}
 				</h2>
 				<div className="my-2">
@@ -148,7 +148,7 @@ export default function Home() {
 						return (
 							<p
 								key={idx}
-								className="px-2 text-base text-blue-950/90 leading-relaxed"
+								className="px-2 text-base text-darkblue leading-relaxed"
 							>
 								{line}
 							</p>
@@ -181,7 +181,7 @@ export default function Home() {
 						return (
 							<p
 								key={idx}
-								className="px-2 text-base text-blue-950/90 leading-relaxed"
+								className="px-2 text-base text-darkblue leading-relaxed"
 							>
 								{line}
 							</p>
@@ -191,9 +191,9 @@ export default function Home() {
 			</section>
 
 			{/* footer */}
-			<footer className="mt-10 border-t border-blue-950/20 pt-4">
+			<footer className="mt-10 border-t border-darkblue/20 pt-4">
 				<section id="team" className="mb-4">
-					<h3 className="text-lg font-semibold text-[#53beed]">
+					<h3 className="text-lg font-semibold text-myakusky">
 						{t.menu.team}
 					</h3>
 					<p className="mt-1 text-lg font-bold">NeurestX</p>
@@ -219,7 +219,7 @@ export default function Home() {
 							return (
 								<p
 									key={idx}
-									className="px-1 text-[#b74e70] leading-relaxed font-semibold"
+									className="px-1 text-myakupink leading-relaxed font-semibold"
 								>
 									{boldMatch[1]}
 								</p>
@@ -229,7 +229,7 @@ export default function Home() {
 						return (
 							<p
 								key={idx}
-								className="px-1 text-base text-blue-950/90 leading-relaxed"
+								className="px-1 text-base text-darkblue leading-relaxed"
 							>
 								{line}
 							</p>
@@ -237,17 +237,17 @@ export default function Home() {
 					})}
 				</section>
 				<section id="contact">
-					<h3 className="text-lg font-semibold text-[#53beed] mb-1">
+					<h3 className="text-lg font-semibold text-myakusky mb-1">
 						{t.menu.contact}
 					</h3>
 					<Link
 						href="mailto:sugarkouga0926@gmail.com"
-						className="text-blue-950/90"
+						className="text-darkblue"
 					>
 						{t.footer.contact}
 					</Link>
 				</section>
-				<div className="mt-4 text-xs text-blue-950/60 text-center">
+				<div className="mt-4 text-xs text-darkblue/60 text-center">
 					&copy; {new Date().getFullYear()} NeurestX
 				</div>
 			</footer>
