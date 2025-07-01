@@ -44,13 +44,47 @@ export default function Home() {
 				/>
 			</section>
 			<section
-				id="flow"
+				id="issues-and-background"
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>
 				<h2 className="text-2xl font-bold text-myakupink mb-2">
-					{t.menu.flow}
+					{t.menu.issuesAndBackground}
 				</h2>
-				{t.flow_contents.map((line: string, idx: number) => {
+
+				{t.issues_and_background_contents.map((line: string, idx: number) => {
+					// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
+					const imgMatch = line.match(/^\[img:(.+)\]$/);
+					if (imgMatch) {
+						return (
+							<div key={idx} className="my-2 flex justify-center">
+								<Image
+									src={imgMatch[1]}
+									alt="Description of issue"
+									width={500}
+									height={300}
+									quality={100}
+									className="mt-2 rounded-lg object-cover max-w-full"
+								/>
+							</div>
+						);
+					}
+					return (
+						<p key={idx} className="px-1 text-darkblue leading-relaxed">
+							{line}
+						</p>
+					)
+				}
+				)}
+
+			</section>
+			<section
+				id="architecture"
+				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
+			>
+				<h2 className="text-2xl font-bold text-myakupink mb-2">
+					{t.menu.architecture}
+				</h2>
+				{t.architecture_contents.map((line: string, idx: number) => {
 					// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
 					const imgMatch = line.match(/^\[img:(.+)\]$/);
 					if (imgMatch) {
@@ -157,27 +191,12 @@ export default function Home() {
 				</div>
 				<div className="my-2">
 					<Link
-						href="https://www.oita-ct.ac.jp/2024/12/26/20241225_45thjesko/"
+						href="https://www.ergonomics.jp/official/wp-content/uploads/2024/10/Programma_Workshop_int_Oct_2024_final.pdf"
 						className="text-lg font-bold text-[#2784ac] hover:underline"
 					>
-						{t.achievement_title_jes}
+						{t.achievement_title_ssc}
 					</Link>
-					{t.achievement_text_jes.map((line: string, idx: number) => {
-						const imgMatch = line.match(/^\[img:(.+)\]$/);
-						if (imgMatch) {
-							return (
-								<div key={idx} className="my-2 flex justify-center">
-									<Image
-										src={imgMatch[1]}
-										alt="Description of jes"
-										width={500}
-										height={300}
-										quality={100}
-										className="mt-2 rounded-lg object-cover max-w-full"
-									/>
-								</div>
-							);
-						}
+					{t.achievement_text_ssc.map((line: string, idx: number) => {
 						return (
 							<p
 								key={idx}
@@ -188,6 +207,54 @@ export default function Home() {
 						);
 					})}
 				</div>
+				<div className="my-2">
+					<Link
+						href="https://www.oita-ct.ac.jp/2024/12/26/20241225_45thjesko/"
+						className="text-lg font-bold text-[#2784ac] hover:underline"
+					>
+						{t.achievement_title_jesk45}
+					</Link>
+					{t.achievement_text_jesk45.map((line: string, idx: number) => {
+						return (
+							<p
+								key={idx}
+								className="px-2 text-base text-darkblue leading-relaxed"
+							>
+								{line}
+							</p>
+						);
+					})}
+				</div>
+				<div className="my-2">
+					<Link
+						href="https://pub.confit.atlas.jp/ja/event/jes66/"
+						className="text-lg font-bold text-[#2784ac] hover:underline"
+					>
+						{t.achievement_title_jes66}
+					</Link>
+					{t.achievement_text_jes66.map((line: string, idx: number) => {
+						return (
+							<p
+								key={idx}
+								className="px-2 text-base text-darkblue leading-relaxed"
+							>
+								{line}
+							</p>
+						);
+					})}
+				</div>
+				<div className="my-2">
+					<Link
+						href="https://pub.confit.atlas.jp/en/event/jes66/presentation/E2-04"
+						className="text-lg font-bold text-[#2784ac] hover:underline"
+					>
+						{t.achievement_title_journal_article}
+					</Link>
+					<p className="px-2 text-base text-darkblue leading-relaxed">
+						{t.achievement_text_journal_article}
+					</p>
+				</div>
+
 			</section>
 
 			{/* footer */}
@@ -197,24 +264,21 @@ export default function Home() {
 						{t.menu.team}
 					</h3>
 					<p className="mt-1 text-lg font-bold">NeurestX</p>
+					<div>
+						<p className="text-base text-darkblue">
+							Leader: Kouga SATO
+						</p>
+						<Image
+							src="/kougaSato.jpg"
+							alt="Kouga Sato"
+							width={150}
+							height={150}
+							className="rounded-full mt-2 mb-1"
+						/>
+					</div>
+
 					{t.footer.team_contents.map((line: string, idx: number) => {
 						const boldMatch = line.match(/^\*\*(.+)\*\*$/);
-						const imgMatch = line.match(/^\[img:(.+)\]$/);
-						if (imgMatch) {
-							return (
-								<div key={idx} className="my-2 flex justify-center">
-									<Image
-										src={imgMatch[1]}
-										alt="About us"
-										width={500}
-										height={300}
-										quality={100}
-										className="mt-2 rounded-lg object-cover max-w-full"
-									/>
-								</div>
-							);
-						}
-
 						if (boldMatch) {
 							return (
 								<p
