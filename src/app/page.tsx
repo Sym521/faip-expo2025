@@ -79,7 +79,7 @@ export default function Home() {
 			</section>
 			<section
 				id="architecture"
-				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
+				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 pt-4"
 			>
 				<h2 className="text-2xl font-bold text-myakupink mb-2">
 					{t.menu.architecture}
@@ -273,7 +273,7 @@ export default function Home() {
 							alt="Kouga Sato"
 							width={150}
 							height={150}
-							className="rounded-full mt-2 mb-1"
+							className="rounded-4xl my-2 mx-auto"
 						/>
 					</div>
 
