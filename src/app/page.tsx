@@ -3,6 +3,7 @@ import Image from "next/image";
 import { getMessages } from "./i18n";
 import { useLang } from "./LangContext";
 import Link from "next/link";
+import { TwitterLogoIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
 	const { lang } = useLang();
@@ -79,13 +80,14 @@ export default function Home() {
 			</section>
 			<section
 				id="architecture"
-				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 pt-4"
+				className="my-6 mr-2 px-2 py-4 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md"
 			>
 				<h2 className="text-2xl font-bold text-myakupink mb-2">
 					{t.menu.architecture}
 				</h2>
 				{t.architecture_contents.map((line: string, idx: number) => {
 					// 画像挿入用: 文字列が [img:パス] の形式なら画像を表示
+					const boldMatch = line.match(/^\*\*(.+)\*\*$/);
 					const imgMatch = line.match(/^\[img:(.+)\]$/);
 					if (imgMatch) {
 						return (
@@ -96,9 +98,20 @@ export default function Home() {
 									width={500}
 									height={300}
 									quality={100}
-									className="mt-2 rounded-lg object-cover max-w-full"
+									className="mt-2 rounded-lg object-cover shadow-md max-w-full"
 								/>
 							</div>
+
+						);
+					}
+					if (boldMatch) {
+						return (
+							<p
+								key={idx}
+								className="px-2 my-2 text-darkblue leading-relaxed text-xl font-semibold"
+							>
+								{boldMatch[1]}
+							</p>
 						);
 					}
 					return (
@@ -318,7 +331,7 @@ export default function Home() {
 							alt="Kouga Sato"
 							width={150}
 							height={150}
-							className="rounded-4xl my-2 mx-auto"
+							className="rounded-4xl my-4 mx-auto"
 						/>
 					</div>
 
@@ -349,15 +362,27 @@ export default function Home() {
 					<h3 className="text-lg font-semibold text-myakusky mb-1">
 						{t.menu.contact}
 					</h3>
-					<Link
-						href="mailto:sugarkouga0926@gmail.com"
-						className="text-darkblue"
-					>
-						{t.footer.contact}
-					</Link>
+					<div className="ml-1 text-darkblue">
+						<Link
+							className="hover:underline"
+							href="mailto:sugarkouga0926@gmail.com"
+						>
+							{t.footer.contact}
+						</Link>
+						<div className="hover:underline">
+							<TwitterLogoIcon className="w-5 h-5 text-darkblue inline-block" />
+							<Link
+								href="https://twitter.com/sugarkouga926"
+							>
+								: @sugarkouga0926
+							</Link>
+						</div>
+					</div>
 				</section>
-				<div className="mt-4 text-xs text-darkblue/60 text-center">
-					&copy; {new Date().getFullYear()} NeurestX
+				<div className="flex mx-auto justify-center mt-6 space-x-2 space-y-1 text-xs text-darkblue/60 text-center">
+					<p>&copy; {new Date().getFullYear()} NeurestX</p>
+					<p>|</p>
+					<p>Created with ❤️ by <Link href="https://x.com/esulikesbread" className="hover:underline">@esulikesbread</Link></p>
 				</div>
 			</footer>
 		</main>
