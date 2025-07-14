@@ -1,9 +1,10 @@
 {
 	"menu": {
 		"overview": "Overview",
-		"issuesAndBackground": "Issues and Background",
+		"issuesAndBackground": "Background",
 		"architecture": "Architecture",
 		"achievements": "Achievements",
+		"currentWorks": "Current Works",
 		"future": "Future Prospects",
 		"team": "About Us",
 		"contact": "Contact📮"
@@ -23,6 +24,19 @@
 		"[img:/flowContent3.png]",
 		"4. 指定されたエアーバッグに対して、エアーポンプで空気圧を調整します。",
 		"[img:/flowContent4.png]"
+	],
+	"currentWork_headlines": {
+		"heatmap": "圧力分布ヒートマップ",
+		"snoreDetection": "いびき検出"
+	},
+	"currentWork_description": {
+		"heatmap": "圧力データから頭部の位置を推定し、二次元ヒートマップを出力するシステム",
+		"snoreDetection": "睡眠中の音声データをもとにいびきの発生を検知するシステム"
+	},
+	"current_work_contents": [
+		"私たちは現在、FAIPのプロトタイプを開発中です。",
+		"ユーザーからのフィードバックをもとに、機能の改善や新機能の追加を行っています。",
+		"今後もAI技術を活用し、より快適な睡眠環境を提供するための研究を続けていきます。"
 	],
 	"future_contents": [
 		"私たちは睡眠不足を、AIを活用した睡眠の質の向上によって解決したいと考えています。",
@@ -52,11 +66,38 @@
 	"achievement_text_journal_article": "2025年5月に、AI枕に関する記事\"Pillow Height Control System Using Artificial Intelligence\"を学会誌に寄稿しました。",
 	"footer": {
 		"team_contents": [
-			"We are a student team from Oita National College of Technology, developing the AI pillow “FAIP.”",
-			"**Our goal is to utilize AI technology to transform sleep in Japan.**"
+			"大分工業高等専門学校の学生チームで、AI枕「FAIP」の開発に取り組んでいます。",
+			"NeurestXという名前には、私たちのビジョンが込められています。",
+			"「Neuro（ニューロ）」は、AIのニューラルネットワークにおけるニューロンと脳科学におけるニューロンの両方を表現しており、「rest（レスト）」は休息を意味しています。そして「X（エックス）」には、睡眠における未知なる可能性を切り開くという願いを込めました。これらを組み合わせたNeurestXは、AIと脳科学を活用して人々の「休息の質を最大化する未知の可能性」に挑戦するという、私たちの核となるビジョンを体現した名前です。"
 		],
 		"contact": "✉️: sugarkouga0926@gmail.com"
 	},
 	"lang": "English",
-	"switch": "日本語"
+	"switch": "日本語",
+	"heatmapPage": {
+		"heatmapHeadline": "圧力分布ヒートマップ",
+		"heatmapContents": [
+			"圧力センサから得られるデータをもとに、頭部の位置を推定するシステムです。",
+			"このシステムは、圧力分布を二次元ヒートマップとして可視化し、ユーザーの頭部の位置を可視化できるようにします。",
+			"ヒートマップは、枕のどの部分にどれだけの圧力がかかっているかを示し、AI枕のリアルタイム制御に役立てることができます。",
+			"[img:/currentWork/heatmapAnimation.gif]",
+			"**処理の流れ**",
+			"4つの圧力センサ（左上・右上・左下・右下）のCSVデータを読み込み、各センサの圧力値を取得します。",
+			"圧力値をもとに、加重平均を用いて頭部の中心位置を推定します。",
+			"[img:/weightedAverage.png]",
+			"中心位置をもとに生成したヒートマップ画像をフレームごとに保存し、アニメーションGIFとして出力します。"
+		]
+	},
+	"snoreDetectionPage": {
+		"snoreDetectionHeadline": "いびき検出",
+		"snoreDetectionContents": [
+			"睡眠中の音声データをもとにいびきの発生を検知するシステムです。",
+			"このシステムは、マイクから得られる音声データを機械学習モデルと統計的アルゴリズムを用いて解析し、いびきのパターンを特定します。",
+			"快適な睡眠環境の自動調整や、寝るだけで病気が早期発見できるようなシステムを目指しています。",
+			"**処理の流れ**",
+			"マイクで取得した音声をメルスペクトログラム変換し、CNNモデルに入力します。",
+			"CNNモデルはバイナリークロスエントロピー損失とAdamオプティマイザで学習しており、PELTアルゴリズムを用いていびきの開始・終了を自動的に特定します。",
+			"[img:/currentWork/snoreDetection.png]"
+		]
+	}
 }

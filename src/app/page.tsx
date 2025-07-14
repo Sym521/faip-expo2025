@@ -109,6 +109,51 @@ export default function Home() {
 				})}
 			</section>
 			<section
+				id="currentWork"
+				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
+			>
+				<h2 className="text-2xl font-bold text-myakupink mb-2">
+					{t.menu.currentWorks}
+				</h2>
+				<div className="grid grid-cols-2 gap-4">
+					{[
+						{
+							href: "/currentWork/heatmap",
+							image: "/heatmap.png",
+							alt: "圧力分布ヒートマップ",
+							headline: t.currentWork_headlines.heatmap,
+							description: t.currentWork_description.heatmap
+						},
+						{
+							href: "/currentWork/snoreDetection",
+							image: "/snoreDetectionThumbnail.png",
+							alt: "いびき検出",
+							headline: t.currentWork_headlines.snoreDetection,
+							description: t.currentWork_description.snoreDetection
+						}
+					].map((item, index) => (
+						<Link key={index} href={item.href}>
+							<div className="border border-slate-200 bg-white/60 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer p-4">
+								<div className="aspect-video relative mb-3">
+									<Image
+										src={item.image}
+										alt={item.alt}
+										fill
+										className="object-cover rounded-md"
+									/>
+								</div>
+								<h3 className="text-lg font-semibold text-darkblue mb-2">
+									{item.headline}
+								</h3>
+								<p className="text-sm text-darkblue/80 leading-relaxed">
+									{item.description}
+								</p>
+							</div>
+						</Link>
+					))}
+				</div>
+			</section>
+			<section
 				id="future"
 				className="my-6 scroll-mt-20 border-2 border-slate-200 bg-white/40 backdrop-blur-sm rounded-lg shadow-md mr-2 px-2 py-4"
 			>

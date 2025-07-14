@@ -8,6 +8,7 @@ const menuItems = [
 	{id: "issuesAndBackground", icon: "📝" },
 	{ id: "architecture", icon: "⚡" },
 	{ id: "achievements", icon: "🏆" },
+	{ id: "currentWorks", icon: "🔧" },
 	{ id: "future", icon: "🕒" },
 	{ id: "team", icon: "👥" },
 	{ id: "contact", icon: "✉️" },
@@ -44,7 +45,7 @@ export default function Menu() {
 					))}
 				</ul>
 				<button
-					className="w-full py-2 bg-myakusky/20 text-base font-bold hover:bg-darkblue/90 hover:text-stone-100 transition-colors duration-200 flex items-center justify-center"
+					className="w-full pb-2 bg-myakusky/20 text-base font-bold hover:bg-darkblue/90 hover:text-stone-100 transition-colors duration-200 flex items-center justify-center"
 					onClick={() => setLang(lang === "ja" ? "en" : "ja")}
 				>
 					<span role="img" aria-label="language" className="text-lg">
