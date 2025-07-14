@@ -9,6 +9,11 @@
 		"team": "チーム紹介",
 		"contact": "お問い合わせ📮"
 	},
+	"menuGuide": {
+		"title": "メニューボタンはこちら！",
+		"description": "右上のボタンから言語を切り替えられます",
+		"closeButton": "OK!"
+	},
 	"overview": "Future Artificial Intelligence Pillow（FAIP）は、AI技術を活用した未来の枕です。一人ひとりのユーザーに最適な高さに自動調整し、呼吸を楽にすることで、質の高い睡眠を提供します。",
 	"issues_and_background_contents": [
 		"日本は先進国の中でも特に睡眠不足が深刻な国です。OECD（経済協力開発機構）の2021年の調査によると、日本人の平均睡眠時間は7時間22分で、OECD加盟国中で最も短いとされています。",
