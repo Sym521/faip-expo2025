@@ -12,7 +12,7 @@ export default function HeatmapPage() {
     return (
         <main className="max-w-md mx-auto px-4 pb-8">
             <section className="pb-8 text-left relative">
-                <div className="font-inter text-[5rem] font-extrabold leading-16 tracking-tighter text-[#3280e6] mb-4">
+                <div className="font-roboto text-[5rem] font-bold leading-16 tracking-tighter text-[#3280e6] mb-4">
                     <p className="text-myakusky">Our</p>
                     <p>Current</p>
                     <p className="text-[#dd3869]">
