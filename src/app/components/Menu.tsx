@@ -5,7 +5,7 @@ import { useLang } from "../LangContext";
 
 const menuItems = [
 	{ id: "overview", icon: "📄" },
-	{id: "issuesAndBackground", icon: "📝" },
+	{ id: "issuesAndBackground", icon: "📝" },
 	{ id: "architecture", icon: "⚡" },
 	{ id: "achievements", icon: "🏆" },
 	{ id: "currentWorks", icon: "🔧" },
@@ -41,7 +41,10 @@ export default function Menu() {
 		<div className="fixed top-4 right-4 z-50">
 			{/* メニューガイドポップアップ */}
 			{showGuide && (
-				<div className="fixed inset-0 bg-slate-700/10 flex items-center justify-center p-4" style={{ zIndex: 60 }}>
+				<div
+					className="fixed inset-0 bg-slate-700/10 flex items-center justify-center p-4"
+					style={{ zIndex: 60 }}
+				>
 					<div className="absolute top-16 right-12 bg-snow font-zen-kaku-gothic-new rounded-xl shadow-2xl max-w-sm w-1/2 mx-2 p-4 text-center">
 						<h3 className="text-lg font-bold text-darkblue mb-3">
 							{t.menuGuide.title}
@@ -58,7 +61,7 @@ export default function Menu() {
 					</div>
 				</div>
 			)}
-			
+
 			<button
 				aria-label="menu"
 				className="w-12 h-12 rounded-full bg-gradient-to-br from-red-200 to-myakusky/60 text-base flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-120 border-2 border-stone-100/80"

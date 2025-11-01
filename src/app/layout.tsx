@@ -1,6 +1,11 @@
 "use client";
 
-import { Inter, Roboto, Noto_Sans_JP, Zen_Kaku_Gothic_New } from "next/font/google";
+import {
+	Inter,
+	Roboto,
+	Noto_Sans_JP,
+	Zen_Kaku_Gothic_New,
+} from "next/font/google";
 import "./globals.css";
 import Menu from "./components/Menu";
 import { LangProvider } from "./LangContext";

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+New&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zen+Kaku+Gothic+New&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -17,7 +17,6 @@ html {
 		font-size: 16px;
 	}
 }
-
 
 @theme inline {
 	--color-background: var(--background);
@@ -62,13 +61,13 @@ html {
 	--radius-lg: var(--radius);
 	--radius-xl: calc(var(--radius) + 4px);
 	--animate-aurora: aurora 8s ease-in-out infinite alternate;
-	
+
 	/* カスタムカラーをTailwindのテーマに登録 */
 	--color-snow: var(--color-snow);
 	--color-darkblue: var(--color-darkblue);
 	--color-myakupink: var(--color-myakupink);
 	--color-myakusky: var(--color-myakusky);
-	
+
 	@keyframes aurora {
 		0% {
 			background-position: 0% 50%;
@@ -126,7 +125,7 @@ html {
 	--sidebar-accent-foreground: oklch(0.205 0 0);
 	--sidebar-border: oklch(0.922 0 0);
 	--sidebar-ring: oklch(0.708 0 0);
-	
+
 	/* カスタムカラー */
 	--color-snow: #fafbf6;
 	--color-darkblue: #132d59;

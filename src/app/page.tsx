@@ -73,10 +73,8 @@ export default function Home() {
 						<p key={idx} className="px-1 text-darkblue leading-relaxed">
 							{line}
 						</p>
-					)
-				}
-				)}
-
+					);
+				})}
 			</section>
 			<section
 				id="architecture"
@@ -101,7 +99,6 @@ export default function Home() {
 									className="mt-2 rounded-lg object-cover shadow-md max-w-full"
 								/>
 							</div>
-
 						);
 					}
 					if (boldMatch) {
@@ -135,15 +132,15 @@ export default function Home() {
 							image: "/heatmap.png",
 							alt: "圧力分布ヒートマップ",
 							headline: t.currentWork_headlines.heatmap,
-							description: t.currentWork_description.heatmap
+							description: t.currentWork_description.heatmap,
 						},
 						{
 							href: "/currentWork/snoreDetection",
 							image: "/snoreDetectionThumbnail.png",
 							alt: "いびき検出",
 							headline: t.currentWork_headlines.snoreDetection,
-							description: t.currentWork_description.snoreDetection
-						}
+							description: t.currentWork_description.snoreDetection,
+						},
 					].map((item, index) => (
 						<Link key={index} href={item.href}>
 							<div className="border border-slate-200 bg-white/60 backdrop-blur-sm rounded-lg shadow-md hover:shadow-lg transition-shadow cursor-pointer p-4">
@@ -312,20 +309,15 @@ export default function Home() {
 						{t.achievement_text_journal_article}
 					</p>
 				</div>
-
 			</section>
 
 			{/* footer */}
 			<footer className="mt-10 border-t border-darkblue/20 pt-4">
 				<section id="team" className="mb-4">
-					<h3 className="text-lg font-semibold text-myakusky">
-						{t.menu.team}
-					</h3>
+					<h3 className="text-lg font-semibold text-myakusky">{t.menu.team}</h3>
 					<p className="mt-1 text-lg font-bold">NeurestX</p>
 					<div>
-						<p className="text-base text-darkblue">
-							Leader: Kouga SATO
-						</p>
+						<p className="text-base text-darkblue">Leader: Kouga SATO</p>
 						<Image
 							src="/kougaSato.jpg"
 							alt="Kouga Sato"
@@ -371,9 +363,7 @@ export default function Home() {
 						</Link>
 						<div className="hover:underline">
 							<TwitterLogoIcon className="w-5 h-5 text-darkblue inline-block" />
-							<Link
-								href="https://twitter.com/sugarkouga926"
-							>
+							<Link href="https://twitter.com/sugarkouga926">
 								: @sugarkouga0926
 							</Link>
 						</div>
@@ -382,7 +372,15 @@ export default function Home() {
 				<div className="flex mx-auto justify-center mt-6 space-x-2 space-y-1 text-xs text-darkblue/60 text-center">
 					<p>&copy; {new Date().getFullYear()} NeurestX</p>
 					<p>|</p>
-					<p>Created with ❤️ by <Link href="https://x.com/esulikesbread" className="hover:underline">@esulikesbread</Link></p>
+					<p>
+						Created with ❤️ by{" "}
+						<Link
+							href="https://x.com/esulikesbread"
+							className="hover:underline"
+						>
+							@esulikesbread
+						</Link>
+					</p>
 				</div>
 			</footer>
 		</main>
