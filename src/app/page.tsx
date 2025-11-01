@@ -211,103 +211,142 @@ export default function Home() {
 				<h2 className="text-2xl font-bold text-myakupink mb-2">
 					{t.menu.achievements}
 				</h2>
-				<div className="my-2">
-					<Link
-						href="https://dcon.ai/dcon2024/"
-						className="text-lg font-bold text-[#2784ac] hover:underline"
-					>
-						{t.achievement_title_dcon}
-					</Link>
-					{t.achievement_text_dcon.map((line: string, idx: number) => {
-						const imgMatch = line.match(/^\[img:(.+)\]$/);
-						if (imgMatch) {
+				<div className="space-y-2">
+					<div>
+						<Link
+							href="https://dcon.ai/dcon2024/"
+							className="text-lg font-bold text-[#2784ac] hover:underline"
+						>
+							{t.achievement_title_dcon}
+						</Link>
+						{t.achievement_text_dcon.map((line: string, idx: number) => {
+							const imgMatch = line.match(/^\[img:(.+)\]$/);
+							if (imgMatch) {
+								return (
+									<div key={idx} className="flex justify-center">
+										<Image
+											src={imgMatch[1]}
+											alt="Description of dcon achievement"
+											width={500}
+											height={300}
+											quality={100}
+											className="mt-2 rounded-lg object-cover max-w-full"
+										/>
+									</div>
+								);
+							}
 							return (
-								<div key={idx} className="my-2 flex justify-center">
-									<Image
-										src={imgMatch[1]}
-										alt="Description of dcon achievement"
-										width={500}
-										height={300}
-										quality={100}
-										className="mt-2 rounded-lg object-cover max-w-full"
-									/>
-								</div>
+								<p
+									key={idx}
+									className="px-2 text-base text-darkblue leading-relaxed"
+								>
+									{line}
+								</p>
 							);
-						}
-						return (
+						})}
+					</div>
+					<div>
+						<Link
+							href="https://www.ergonomics.jp/official/wp-content/uploads/2024/10/Programma_Workshop_int_Oct_2024_final.pdf"
+							className="text-lg font-bold text-[#2784ac] hover:underline"
+						>
+							{t.achievement_title_ssc}
+						</Link>
+						{t.achievement_text_ssc.map((line: string, idx: number) => (
 							<p
 								key={idx}
 								className="px-2 text-base text-darkblue leading-relaxed"
 							>
 								{line}
 							</p>
-						);
-					})}
-				</div>
-				<div className="my-2">
-					<Link
-						href="https://www.ergonomics.jp/official/wp-content/uploads/2024/10/Programma_Workshop_int_Oct_2024_final.pdf"
-						className="text-lg font-bold text-[#2784ac] hover:underline"
-					>
-						{t.achievement_title_ssc}
-					</Link>
-					{t.achievement_text_ssc.map((line: string, idx: number) => {
-						return (
+						))}
+					</div>
+					<div>
+						<Link
+							href="https://www.oita-ct.ac.jp/2024/12/26/20241225_45thjesko/"
+							className="text-lg font-bold text-[#2784ac] hover:underline"
+						>
+							{t.achievement_title_jesk45}
+						</Link>
+						{t.achievement_text_jesk45.map((line: string, idx: number) => (
 							<p
 								key={idx}
 								className="px-2 text-base text-darkblue leading-relaxed"
 							>
 								{line}
 							</p>
-						);
-					})}
-				</div>
-				<div className="my-2">
-					<Link
-						href="https://www.oita-ct.ac.jp/2024/12/26/20241225_45thjesko/"
-						className="text-lg font-bold text-[#2784ac] hover:underline"
-					>
-						{t.achievement_title_jesk45}
-					</Link>
-					{t.achievement_text_jesk45.map((line: string, idx: number) => {
-						return (
+						))}
+					</div>
+					<div>
+						<Link
+							href="https://pub.confit.atlas.jp/ja/event/jes66/"
+							className="text-lg font-bold text-[#2784ac] hover:underline"
+						>
+							{t.achievement_title_jes66}
+						</Link>
+						{t.achievement_text_jes66.map((line: string, idx: number) => (
 							<p
 								key={idx}
 								className="px-2 text-base text-darkblue leading-relaxed"
 							>
 								{line}
 							</p>
-						);
-					})}
-				</div>
-				<div className="my-2">
-					<Link
-						href="https://pub.confit.atlas.jp/ja/event/jes66/"
-						className="text-lg font-bold text-[#2784ac] hover:underline"
-					>
-						{t.achievement_title_jes66}
-					</Link>
-					{t.achievement_text_jes66.map((line: string, idx: number) => {
-						return (
+						))}
+					</div>
+					<div>
+						<Link
+							href="https://pub.confit.atlas.jp/en/event/jes66/presentation/E2-04"
+							className="text-lg font-bold text-[#2784ac] hover:underline"
+						>
+							{t.achievement_title_journal_article}
+						</Link>
+						<p className="px-2 text-base text-darkblue leading-relaxed">
+							{t.achievement_text_journal_article}
+						</p>
+					</div>
+					<div>
+						<Link
+							href="https://www.spark-awards.com/"
+							className="text-lg font-bold text-[#2784ac] hover:underline"
+						>
+							{t.achievement_title_expo2025}
+						</Link>
+						<p className="px-2 text-base text-darkblue leading-relaxed">
+							{t.achievement_text_expo2025}
+						</p>
+					</div>
+					<div>
+						<Link
+							href="https://prtimes.jp/main/html/rd/p/000000010.000109372.html"
+							className="text-lg font-bold text-[#2784ac] hover:underline"
+						>
+							{t.achievement_title_sxpark}
+						</Link>
+						{t.achievement_text_sxpark.map((line: string, idx: number) => (
 							<p
 								key={idx}
 								className="px-2 text-base text-darkblue leading-relaxed"
 							>
 								{line}
 							</p>
-						);
-					})}
-				</div>
-				<div className="my-2">
-					<Link
-						href="https://pub.confit.atlas.jp/en/event/jes66/presentation/E2-04"
-						className="text-lg font-bold text-[#2784ac] hover:underline"
-					>
-						{t.achievement_title_journal_article}
-					</Link>
-					<p className="px-2 text-base text-darkblue leading-relaxed">
-						{t.achievement_text_journal_article}
-					</p>
+						))}
+					</div>
+					<div>
+						<Link
+							href="https://kidou.site/kidou-global/"
+							className="text-lg font-bold text-[#2784ac] hover:underline"
+						>
+							{t.achievement_title_kidou}
+						</Link>
+						{t.achievement_text_kidou.map((line: string, idx: number) => (
+							<p
+								key={idx}
+								className="px-2 text-base text-darkblue leading-relaxed"
+							>
+								{line}
+							</p>
+						))}
+					</div>
 				</div>
 			</section>
 

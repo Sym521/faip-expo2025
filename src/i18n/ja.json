@@ -79,8 +79,18 @@
 	"achievement_text_jes66": [
 		"2024年11月に開催された日本人間工学会第66回大会で、九州を代表するモノづくりとしてAI枕を展示しました。"
 	],
-	"achievement_title_journal_article": "学会誌に記事を寄稿予定",
-	"achievement_text_journal_article": "学術研究が認められ、AI枕に関する記事\"Pillow Height Control System Using Artificial Intelligence\"を学会誌に寄稿予定です。",
+	"achievement_title_journal_article": "学会誌に記事を寄稿",
+	"achievement_text_journal_article": "学術研究が認められ、AI枕に関する記事\"Pillow Height Control System Using Artificial Intelligence\"を学会誌に寄稿しました。",
+	"achievement_title_expo2025": "大阪・関西万博への出展決定",
+	"achievement_text_expo2025": "2025年7月19日～21日に開催されたデジタル学園祭アワード・S×PARKを通じて、大阪万博にてAI枕を展示しました。",
+	"achievement_title_sxpark": "デジタル学園祭アワード S×PARKにて「特別賞」、「準グランプリ」を受賞",
+	"achievement_text_sxpark": [
+		"2025年7月19日～21日にて開催されたデジタル学園祭アワード・フューチャー・インパクト部門にて、「準グランプリ」及び万博来場者投票による「特別賞」を受賞いたしました。"
+	],
+	"achievement_title_kidou": "KIDOU Global Conferenceへの参加と発表",
+	"achievement_text_kidou": [
+		"2025年9月に開催されたKIDOU Global Conferenceで英語でプレゼンテーションを行いました。"
+	],
 	"footer": {
 		"team_contents": [
 			"大分工業高等専門学校の学生チームで、AI枕「FAIP」の開発に取り組んでいます。",
